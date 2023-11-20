@@ -7,15 +7,15 @@ fun main() {
 
     // Si yo cambio el valor de booleanTrue, va a funcionar
     booleanTrue = false
-    println(booleanTrue)
+    println("Result should be false. Result = $booleanTrue")
 
     // Si yo cambio el valor de booleanFalse, no va a funcionar
     // booleanFalse = true
-    println(booleanFalse)
+    println("Result should be false. Result = $booleanFalse")
 
     // Con esto forzamos el tipo. Ahora mismo no sería necesario
     var anotherBoolean: Boolean = true
-    println(anotherBoolean)
+    println("Result should be true. Result = $anotherBoolean")
 
     // MARK: Ints
     println("----------Numbers----------")
@@ -43,25 +43,32 @@ fun main() {
     println("Value of module = $module (Should be 1)")
 
     var double = 1.0
-    println(double)
+    println("Should be double: $double")
 
     var float = 1.0f
-    println(float)
+    println("Should be float: $float")
 
     // MARK: Letters
     println("----------Letters----------")
     var letter = 'a'
-    println(letter)
+    println("Sould be a: $letter")
 
     var text = "Hello world!"
-    println("${text[0]} ${text[1]}")
+    println("Sould be H e: ${text[0]} ${text[1]}")
 
     val text2: String
     text2 = "How are you?"
-    println(text2)
+    println("Should be How are you?: $text2")
 
     var isFloat: Boolean = float is Float
     println("The float is Float? = $isFloat")
 
-    
+    var integer2 : Int? = null
+    // integer2 = null
+
+    var text3 : String? = null
+    // text3[0]
+
+    println("Should be are you?: ${text2.substring(4)}")
+    println(text3?.substring(4) ?: "Ups, it was null")
 }
