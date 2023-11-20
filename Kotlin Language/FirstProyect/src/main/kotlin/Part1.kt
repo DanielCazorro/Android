@@ -76,5 +76,5 @@ fun main() {
     val text4 = "12"
     val text5 = "34"
     val text6 = text4 + text5
-    println("Should be 1234: $text6")
+    println("Should be: $text6")
 }
