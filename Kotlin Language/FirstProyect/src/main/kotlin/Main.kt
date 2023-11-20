@@ -35,4 +35,8 @@ fun main() {
 
     var text = "Hello world!"
     println(text)
+
+    val text2: String
+    text2 = "How are you?"
+    println(text2)
 }
