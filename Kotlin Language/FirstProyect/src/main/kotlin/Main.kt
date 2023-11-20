@@ -18,9 +18,21 @@ fun main() {
     println(anotherBoolean)
 
     // MARK: Ints
-    println("----------Ints----------")
+    println("----------Numbers----------")
     var integer1 = 1
     println(integer1)
 
-    var decimal = 1.0
+    var double = 1.0
+    println(double)
+
+    var float = 1.0f
+    println(float)
+
+    // MARK: Letters
+    println("----------Letters----------")
+    var letter = 'a'
+    println(letter)
+
+    var text = "Hello world!"
+    println(text)
 }
