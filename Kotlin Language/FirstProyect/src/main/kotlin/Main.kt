@@ -20,7 +20,24 @@ fun main() {
     // MARK: Ints
     println("----------Numbers----------")
     var integer1 = 1
-    println(integer1)
+    integer1 = 2
+    integer1 = integer1 + 3
+    integer1 = integer1 - 3
+    integer1 = integer1 * 3
+
+    integer1 = 6
+    integer1 = integer1 / 3
+    println("Value of integer1 = $integer1  (Should be 2)")
+
+    // Dividir 7/2 y asignándoselo a un entero, es 3
+    integer1 = 7
+    integer1 = integer1 / 3
+    println("Value of integer1 = $integer1  (Should be ?)")
+
+    integer1 = 7
+    val division = integer1.toDouble()/3
+    println("Value of division = $division  (Should be 2.333333)")
+
 
     var double = 1.0
     println(double)
