@@ -67,8 +67,14 @@ fun main() {
     // integer2 = null
 
     var text3 : String? = null
-    // text3[0]
+    // text3[0]   (Esto no funciona)
 
     println("Should be are you?: ${text2.substring(4)}")
+    // Está PROHIBIDO las !!
     println(text3?.substring(4) ?: "Ups, it was null")
+
+    val text4 = "12"
+    val text5 = "34"
+    val text6 = text4 + text5
+    println("Should be: $text6")
 }
