@@ -30,10 +30,20 @@ fun main() {
         num * 2
     }
 
-    val lambda6: (Int, String)-> Int = { a,b -> 1 }
+    // Esta lambda simplement multiplica los 2 números que les pases
+    val lambda6: (Int, Int)-> Int = { num1, num2 ->
+        if (num1 > 2) {
+            num2 * 1000
+        } else {
+            println("Soy lambda 5")
+            num1 * num2
+        }
+
+    }
 
     println(lambda3())
     println(lambda5(5))
+    println(lambda6(5, 10))
 }
 
 fun ejecutarLambda(lambda: () -> Unit) {
