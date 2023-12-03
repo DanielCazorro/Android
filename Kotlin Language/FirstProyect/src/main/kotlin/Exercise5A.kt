@@ -1,5 +1,4 @@
 /*
-
 Transform the following functions into Lambdas and run them.
 
 - fun lambda1() {println("This Lambda writes: Hello")}
@@ -11,21 +10,20 @@ fun main() {
     val lambda1 = { println("This Lambda writes: Hello") }
 
     println("----------")
-    lambda1()
+    lambda1() // Ejecuta la lambda1
 
     val lambda2: (Int) -> Unit = { integer ->
         println("This Lambda receives an Int and writes it: $integer")
     }
 
-
     println("----------")
-    lambda2(8)
+    lambda2(8) // Ejecuta lambda2 con el argumento 8
 
-    val lambda3: (Int, List<Any>) -> Unit  = { position, list ->
+    val lambda3: (Int, List<Any>) -> Unit = { position, list ->
         println("This Lambda receives an Int and a List. Writes the element at position $position: ${list[position]}")
     }
 
     println("----------")
     val myList = listOf(0, "Yes") // Crear la lista antes de llamar a lambda3
-    lambda3(1, myList)
+    lambda3(1, myList) // Ejecuta lambda3 con el índice 1 y la lista myList
 }

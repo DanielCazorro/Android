@@ -5,19 +5,23 @@ fun main() {
     println("Should be: are not the same")
     ifClassic(1, 2)
     println("Should be: are the same")
-    ifClassic(1,1)
+    ifClassic(1, 1)
+
     println("-----ifClassicEasy-----")
     println("Should be: are not the same")
-    ifClassicEasy(1,2)
+    ifClassicEasy(1, 2)
     println("Should be: are the same")
-    ifClassicEasy(1,1)
+    ifClassicEasy(1, 1)
+
     println("-----whenConParametro ------")
-    whenWithParam(Random.nextInt(0,5))
+    whenWithParam(Random.nextInt(0, 5))
+
     println("-----whenSinParametro ------")
-    whenWithoutParam(Random.nextInt(0,5))
+    whenWithoutParam(Random.nextInt(0, 5))
 
     val int = 1
     val float = 1.0f
+
     println("-----Comparando clases When-----")
     whenComparingClasses(int)
     whenComparingClasses(float)
@@ -45,8 +49,7 @@ fun whenWithParam(num: Int) {
         }
         2 -> println("Soy un dos")
         3 -> println("Soy un tres")
-        4,5 -> println("Soy un cuatro o un cinco")
-
+        in 4..5 -> println("Soy un cuatro o un cinco")
         else -> println("Soy un número distinto a uno, dos y tres")
     }
 }
@@ -58,7 +61,7 @@ fun whenWithoutParam(num: Int) {
             println("Soy un uno")
             println("Es mi número favorito")
         }
-        (num > 1) && (num < 300) -> {
+        num in 2..299 -> {
             println("Soy un número mayor que uno")
         }
         else -> println("Soy otro número")

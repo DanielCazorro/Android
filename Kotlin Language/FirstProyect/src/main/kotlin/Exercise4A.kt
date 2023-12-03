@@ -13,38 +13,25 @@ Create a list that:
  */
 
 fun main() {
-    val listRandom = listRandom()
-    val resultList = resultList(listRandom)
+    val listRandom = listRandom() // Genera la lista aleatoria
+    val resultList = resultList(listRandom) // Crea la lista de conteo
     println("Lista aleatoria: $listRandom")
     println("Resultado de conteo: $resultList")
 }
 
+// Genera una lista aleatoria de 100 elementos entre 0 y 9
 fun listRandom(): List<Int> {
-    val listRandom = mutableListOf<Int>()
-    repeat(100) {
-        listRandom.add(Random.nextInt(0, 10))
-    }
+    val listRandom = MutableList(100) { Random.nextInt(0, 10) }
     return listRandom
 }
 
-/*
-fun listRandom() {
-    var index = 0
-    val listRandom = mutableListOf<Int>()
-    do {
-        listRandom.add(Random.nextInt(0, 9))
-        index++
-    } while (index < 100)
-    println(listRandom.count())
-    println(listRandom)
-}
-*/
+// Cuenta la cantidad de ocurrencias de cada número en la lista aleatoria y genera una lista de conteo
 fun resultList(listRandom: List<Int>): List<Int> {
     val resultList = MutableList(10) { 0 } // Lista de 10 elementos inicializados en 0
-    val counts = listRandom.groupingBy { it }.eachCount()
+    val counts = listRandom.groupingBy { it }.eachCount() // Cuenta la cantidad de cada elemento
 
     for ((key, value) in counts) {
-        resultList[key] = value
+        resultList[key] = value // Asigna la cantidad al índice correspondiente en la lista de resultados
     }
     return resultList
 }

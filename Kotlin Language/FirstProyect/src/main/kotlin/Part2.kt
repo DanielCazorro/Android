@@ -15,7 +15,6 @@ fun main() {
     println("----------")
     writeSomethingMore("Happy Hunting,")
 
-
     println("----------")
     println("getRandomNumber: ${getRandomNumber()}")
 
@@ -29,16 +28,16 @@ fun main() {
     println("Ending Part2")
 }
 
-fun write(){
+fun write() {
     println("Entering function: write()")
 }
 
-fun writeSomething(text: String){
+fun writeSomething(text: String) {
     println("Entering the function: writeSomething()")
     println(text)
 }
 
-fun writeSomethingMore(greeting: String, name: String = "Rathalos"){
+fun writeSomethingMore(greeting: String, name: String = "Rathalos") {
     println("Entering the function writeSomethingMore()")
     println("$greeting $name")
 }
@@ -51,5 +50,6 @@ fun getRandomNumberEasy() = Random.nextInt()
 
 fun writeGreetingsWithNull(greeting: String?, name: String?) {
     println("Starting function writeGreetingsWithNull")
+    // Usando el operador elvis ?: para mostrar un mensaje predeterminado si el valor es nulo
     println("${greeting ?: "Greeting was null"}${name ?: "Name was null"}")
 }
