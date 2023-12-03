@@ -5,19 +5,19 @@ Create a function that receives an Integer and a String, the Integer being the l
 -If the person is over 81, then they should return: "{Name}, you are in perfect condition!
  */
 
-fun  startCharacter(life: Int, name: String): String {
+fun startCharacter(life: Int, name: String): String {
 
     return when {
         life <= 20 -> {
-            "Caution $name, you are under life"
+            "Caution $name, you are under life. Your life is $life"
         }
 
         (life > 21) && (life < 80) -> {
-            "$name, you are a little hurt"
+            "$name, you are a little hurt. Your life is $life"
         }
 
         else -> {
-            "$name, you are in perfect condition!"
+            "$name, you are in perfect condition!. Your life is $life"
         }
     }
 }
