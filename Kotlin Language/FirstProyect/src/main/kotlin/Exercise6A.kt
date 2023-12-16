@@ -14,7 +14,7 @@ class CharacterFight(private val name: String, life: Int) {
     fun receiveHit() {
         val lifeToRest = Random.nextInt(10, 61)
         actualLife -= lifeToRest
-        listOfPoints.add(-lifeToRest)
+        listOfPoints.add(lifeToRest * -1)
 
         if (actualLife < 0) { // Modificamos la condición para asegurarnos de que no haya vida negativa
             actualLife = 0
@@ -31,8 +31,8 @@ class CharacterFight(private val name: String, life: Int) {
 
     // Método para mostrar el estado actual del personaje
     fun showStatus() {
-        println("Current life: $actualLife")
         println("Name: $name")
+        println("Current life: $actualLife")
         println("List of hits and healing: $listOfPoints")
     }
 }
