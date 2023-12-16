@@ -1,4 +1,4 @@
-git/*
+/*
 Complementing exercise 2 and using the loops seen so far, create a program in Kotlin that only allows
 you to establish a life between 0 and 100. If the number does not meet these conditions, you must ask it again
  */
