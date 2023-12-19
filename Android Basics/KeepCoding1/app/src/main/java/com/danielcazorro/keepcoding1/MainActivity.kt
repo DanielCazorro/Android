@@ -7,7 +7,7 @@ import android.util.Log
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_linear_layout)
         println("Soy el println")
         Log.d("TAG", "Soy el log nivel d")
         Log.i("TAG", "Soy el log nivel i")
