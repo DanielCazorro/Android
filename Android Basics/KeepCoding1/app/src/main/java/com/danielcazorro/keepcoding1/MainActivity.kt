@@ -15,5 +15,9 @@ class MainActivity : AppCompatActivity() {
         Log.e("TAG", "Soy el log nivel e")
         Log.wtf("TAG", "Soy el log nivel wtf")
 
+        var a = Example(1)
+        var b = MainActivity()
     }
+
+    data class Example(var a:Int)
 }
